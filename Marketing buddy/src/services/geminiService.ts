@@ -104,7 +104,7 @@ export async function findSponsorsAI(idea: string, category: string, location: s
 
 export function createMarketingChat(): Chat {
   return ai.chats.create({
-    model: "gemini-3-flash-preview",
+    model: "gemini-3-flash",
     config: {
       systemInstruction: `Sei un esperto di marketing di livello mondiale con una profonda conoscenza del mercato italiano. 
       Fornisci consulenza strategica, idee creative e suggerimenti pratici. 
@@ -120,7 +120,7 @@ export function createMarketingChat(): Chat {
 
 export function createAccountantChat(): Chat {
   return ai.chats.create({
-    model: "gemini-3.1-pro-preview",
+    model: "gemini-3-flash",
     config: {
       systemInstruction: `Sei un Commercialista esperto iscritto all'Albo in Italia, specializzato in consulenza per startup, piccole medie imprese (PMI) e liberi professionisti.
       La tua missione è fornire informazioni precise, aggiornate e professionali sulla legge italiana, con particolare attenzione a:
