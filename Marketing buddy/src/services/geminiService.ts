@@ -85,7 +85,7 @@ export async function analyzeLocation(location: string, idea: string, category: 
 export async function findSponsorsAI(idea: string, category: string, location: string) {
   try {
     const response = await ai.models.generateContent({
-      model: "gemini-3-flash-preview",
+      model: "gemini-2.5-flash",
       contents: `Analizza l'idea: "${idea}" (categoria: ${category}) a "${location}".
       Identifica i 3-5 profili di sponsor ideali (categorie di aziende).
       Per ogni categoria fornisci:
@@ -104,7 +104,7 @@ export async function findSponsorsAI(idea: string, category: string, location: s
 
 export function createMarketingChat(): Chat {
   return ai.chats.create({
-    model: "gemini-3-flash",
+    model: "gemini-2.5-flash",
     config: {
       systemInstruction: `Sei un esperto di marketing di livello mondiale con una profonda conoscenza del mercato italiano. 
       Fornisci consulenza strategica, idee creative e suggerimenti pratici. 
@@ -120,7 +120,7 @@ export function createMarketingChat(): Chat {
 
 export function createAccountantChat(): Chat {
   return ai.chats.create({
-    model: "gemini-3-flash",
+    model: "gemini-2.5-flash",
     config: {
       systemInstruction: `Sei un Commercialista esperto iscritto all'Albo in Italia, specializzato in consulenza per startup, piccole medie imprese (PMI) e liberi professionisti.
       La tua missione è fornire informazioni precise, aggiornate e professionali sulla legge italiana, con particolare attenzione a:
