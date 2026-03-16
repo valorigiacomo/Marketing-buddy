@@ -1,0 +1,7 @@
+{
+  "name": "Marketing buddy AI",
+  "description": "Your intelligent companion for marketing strategy, financial planning, and location analysis.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
