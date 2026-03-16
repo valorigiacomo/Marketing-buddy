@@ -17,7 +17,7 @@ export interface MarketingAnalysis {
 
 export async function analyzeMarketingIdea(idea: string, category: string): Promise<MarketingAnalysis> {
   const response = await ai.models.generateContent({
-    model: "gemini-3.1-pro-preview",
+    model: "gemini-3.1-flash",
     contents: `Analizza la seguente idea di marketing per un progetto di tipo "${category}": "${idea}". 
     Fornisci un'analisi SWOT dettagliata, una lista di pro e contro e una breve struttura di business plan.
     Rispondi in ITALIANO.
